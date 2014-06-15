@@ -1,0 +1,16 @@
+[user]
+	name = Aaron W. Tabor
+	email = aarontabor50@gmail.com
+[diff]
+[merge]
+[difftool]
+[color]
+	ui = auto
+	diff = auto
+
+[alias]
+  a = add
+  aa = add --all
+  ci = commit
+  co = checkout
+  s = status

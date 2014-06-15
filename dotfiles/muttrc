@@ -1,0 +1,21 @@
+# Basic .muttrc for use with Gmail
+
+
+# For receiving?
+set imap_user = "aarontabor50@gmail.com"
+set imap_pass = "tcssxwzrflhznsgk"
+set from = "aarontabor50@gmail.com"
+set realname = "Aaron W. Tabor"
+
+# For sending?
+set smtp_url = "smtp://aarontabor50@smtp.gmail.com:587/"
+set smtp_pass = "tcssxwzrflhznsgk"
+
+set spoolfile = "imaps://imap.gmail.com:993/INBOX"
+set folder = "imaps://imap.gmail.com:993"
+set postponed = "imaps://imap.gmail.com/[Gmail]/Drafts"
+
+set sort = "reverse-threads"
+set sort_aux = "last-date-received"
+
+set editor = "vim"

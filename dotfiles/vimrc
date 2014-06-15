@@ -1,0 +1,71 @@
+"Enable syntax highlighting
+syntax on
+
+" Set 'nocompatible' to ward off unexpected things that your distro might
+" have made, as well as sanely reset options when re-sourcing .vimrc
+set nocompatible
+
+" Attempt to determine the type of a file based on its name and possibly its
+" contents. Use this to allow intelligent auto-indenting for each filetype,
+" and for plugins that are filetype specific.
+filetype indent plugin on
+set smartindent
+
+" Better command-line completion
+set wildmenu
+
+" Show partial commands in the last line of the screen
+set showcmd
+
+" Highlight Searches (Use <Space> to temporarily disable highlighting)
+set hlsearch
+nmap <Space> :noh<cr>
+
+" Show search matches as you type them
+set incsearch
+
+" When opening a new line and no filetype-specific indenting is enabled, keep
+" the same indent as the line you're currently on. Useful for READMEs, etc.
+set autoindent
+
+" Display line numbers on the left
+set number
+
+" If a file is changed outside of vim, automatically reload it without asking
+set autoread
+
+" Indentation settings for using 2 spaces instead of tabs.
+" Do not change 'tabstop' from its default value of 8 with this setup.
+"set shiftwidth=2
+"set softtabstop=2
+set expandtab
+
+" Move around splits with <c-hjkl>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MULTIPURPOSE TAB KEY
+" " Indent if we're at the beginning of a line. Else, do completion.
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
+
+" map ,c to 'compile' the current python file (run main if exists)
+nmap ,c :w\|!clear && python %<cr>
+
+" map ,t to 'test' the current python file (run py.test with the file)
+nmap ,t :w\|!clear && py.test %<cr>
+
+" map ,T to global 'Test' all python files (run py.test with no args)
+nmap ,T :w\|!clear && py.test<cr>
