@@ -5,12 +5,6 @@ syntax on
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
-" Attempt to determine the type of a file based on its name and possibly its
-" contents. Use this to allow intelligent auto-indenting for each filetype,
-" and for plugins that are filetype specific.
-filetype indent plugin on
-set smartindent
-
 " Better command-line completion
 set wildmenu
 
@@ -35,10 +29,9 @@ set number
 set autoread
 
 " Indentation settings for using 2 spaces instead of tabs.
-" Do not change 'tabstop' from its default value of 8 with this setup.
-"set shiftwidth=2
-"set softtabstop=2
-set expandtab
+set tabstop=2           " tab character will be interpreted as 2 spaces
+set shiftwidth=2        " indentation will be automated to 2 spaces
+set expandtab           " expand all tab characters to the corresponding number of space characters
 
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
