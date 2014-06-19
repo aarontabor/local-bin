@@ -56,9 +56,3 @@ inoremap <s-tab> <c-n>
 
 " map ,c to 'compile' the current python file (run main if exists)
 nmap ,c :w\|!clear && python %<cr>
-
-" map ,t to 'test' the current python file (run py.test with the file)
-nmap ,t :w\|!clear && py.test %<cr>
-
-" map ,T to global 'Test' all python files (run py.test with no args)
-nmap ,T :w\|!clear && py.test<cr>
