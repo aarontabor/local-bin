@@ -56,3 +56,6 @@ inoremap <s-tab> <c-n>
 
 " map ,c to 'compile' the current python file (run main if exists)
 nmap ,c :w\|!clear && python %<cr>
+
+" pathogen plugin manager
+execute pathogen#infect()
