@@ -21,6 +21,7 @@ set incsearch
 " When opening a new line and no filetype-specific indenting is enabled, keep
 " the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
+filetype indent on
 
 " Display line numbers on the left
 set number
