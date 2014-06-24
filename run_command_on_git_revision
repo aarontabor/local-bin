@@ -1,0 +1,46 @@
+#!/bin/bash
+set -e
+
+function main() {
+
+  if [ $# -ne 3 ]; then
+    usage
+    exit 1
+  fi
+
+  start_commit=$1
+  end_commit=$2
+  command_to_run=$3
+
+  commits=`commitsBetween $start_commit $end_commit`
+
+  for commit in $commits; do
+    checkoutSilent $commit
+    echo "switching to branch: $commit"
+    runCommand "$command_to_run"
+    echo "done on branch: $commit"
+    echo
+  done
+}
+
+
+function checkoutSilent() {
+  git checkout $1 &> /dev/null
+}
+
+function runCommand() {
+  echo "running: \"$1\""
+  $1
+}
+
+function commitsBetween() {
+  git rev-list --reverse $1..$2
+}
+
+function usage() {
+  script_name=`basename $0`
+  echo "USAGE: $script_name <start commit> <end commit> <command to run>"
+}
+
+
+main "$@"
