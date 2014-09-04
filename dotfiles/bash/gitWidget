@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Prints a shell prompt widget to stdout
+#
+# Widget displays:
+#   Current Branch Name (if in a git repository)
+#
+# Widget is Color-Coded
+#
+
+cleanColor=$1
+dirtyColor=$2
+unusedColor=$3
+promptDefaultColor=$4
+
+if [ -z "`git status 2>&1 | grep fatal`" ]; then
+  gitBranch=`git branch | grep "\*" | cut -d" " -f2`
+
+  widgetColor=$promptDefaultColor
+  if [ -n "`git status | grep "nothing to commit, working directory clean"`" ]; then
+    widgetColor=$cleanColor
+  elif [ -n "`git status | grep ""`" ]; then
+    widgetColor=$dirtyColor
+  elif [ -n "`git status | grep ""`" ]; then
+    # local behind origin
+    widgetColor=$unusedColor
+  fi
+
+
+  echo "$widgetColor[$gitBranch]$promptDefaultColor"
+else
+  echo ""
+fi
+

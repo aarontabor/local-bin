@@ -12,6 +12,9 @@ source ~/bin/dotfiles/bash/environment
 source ~/bin/dotfiles/bash/aliases
 source ~/bin/dotfiles/bash/config
 
+# reload prompt before every prompt
+PROMPT_COMMAND="source ~/bin/dotfiles/bash/config"
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
