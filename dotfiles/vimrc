@@ -43,6 +43,15 @@ nnoremap ,- :exe "resize " . (winheight(0) * 2/3)<cr>
 nnoremap ,> :exe "vertical resize " . (winwidth(0) * 3/2)<cr>
 nnoremap ,< :exe "vertical resize " . (winwidth(0) * 2/3)<cr>
 
+"
+" I always come here to look for these keybindings, so I'm making a note of
+" them here.  These are stock vim keybindings:
+"
+"   Maximize current vertical split   - <c-w> |
+"   Maximize current horizontal split - <c-w> _
+"   Make all splits even              - <c-w> =
+"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " " Indent if we're at the beginning of a line. Else, do completion.
