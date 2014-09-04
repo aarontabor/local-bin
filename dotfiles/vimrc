@@ -70,5 +70,11 @@ inoremap <s-tab> <c-n>
 " map ,c to 'compile' the current python file (run main if exists)
 nmap ,c :w\|!clear && python %<cr>
 
+" run current test file with py.test
+nmap ,r :w\|!clear && py.test %<cr>
+"
+" run test suite
+nmap ,R :w\|!clear && py.test<cr>
+
 " map ,t to launch CommandT plugin
 nmap ,t :CommandT<cr>
