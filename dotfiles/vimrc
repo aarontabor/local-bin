@@ -23,9 +23,6 @@ set incsearch
 set autoindent
 filetype indent on
 
-" Display line numbers on the left
-set number
-
 " If a file is changed outside of vim, automatically reload it without asking
 set autoread
 
