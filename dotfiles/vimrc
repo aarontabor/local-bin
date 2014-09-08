@@ -1,3 +1,5 @@
+let mapleader = ","
+
 "Enable syntax highlighting
 syntax on
 
@@ -38,10 +40,10 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 " Incremental Split resize
-nnoremap ,+ :exe "resize " . (winheight(0) * 3/2)<cr>
-nnoremap ,- :exe "resize " . (winheight(0) * 2/3)<cr>
-nnoremap ,> :exe "vertical resize " . (winwidth(0) * 3/2)<cr>
-nnoremap ,< :exe "vertical resize " . (winwidth(0) * 2/3)<cr>
+nnoremap <leader>+ :exe "resize " . (winheight(0) * 3/2)<cr>
+nnoremap <leader>- :exe "resize " . (winheight(0) * 2/3)<cr>
+nnoremap <leader>> :exe "vertical resize " . (winwidth(0) * 3/2)<cr>
+nnoremap <leader>< :exe "vertical resize " . (winwidth(0) * 2/3)<cr>
 
 "
 " I always come here to look for these keybindings, so I'm making a note of
@@ -67,14 +69,14 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
-" map ,c to 'compile' the current python file (run main if exists)
-nmap ,c :w\|!clear && python %<cr>
+" run (or 'compile' if you like) current python source file
+nmap <leader>c :w\|!clear && python %<cr>
 
 " run current test file with py.test
-nmap ,r :w\|!clear && py.test %<cr>
-"
-" run test suite
-nmap ,R :w\|!clear && py.test<cr>
+nmap <leader>r :w\|!clear && py.test %<cr>
 
-" map ,t to launch CommandT plugin
-nmap ,t :CommandT<cr>
+" run test suite
+nmap <leader>R :w\|!clear && py.test<cr>
+
+" run CommandT plugin
+nmap <leader>t :CommandT<cr>
