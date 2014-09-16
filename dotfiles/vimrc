@@ -55,6 +55,10 @@ nnoremap <leader>< :exe "vertical resize " . (winwidth(0) * 2/3)<cr>
 "   Make all splits even              - <c-w> =
 "
 
+" Move line up (with _) or down (with -)
+map - ddp
+map _ ddkP
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " " Indent if we're at the beginning of a line. Else, do completion.
