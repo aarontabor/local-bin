@@ -81,5 +81,8 @@ nnoremap <leader>r :w\|!clear && py.test %<cr>
 " run test suite
 nnoremap <leader>R :w\|!clear && py.test<cr>
 
+" launch python shell
+nnoremap <leader>s :w\|!clear && python<cr>
+
 " run CommandT plugin
 nnoremap <leader>t :CommandT<cr>
