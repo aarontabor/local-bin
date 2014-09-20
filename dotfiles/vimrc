@@ -17,7 +17,7 @@ set showcmd
 
 " Highlight Searches (Use <Space> to temporarily disable highlighting)
 set hlsearch
-nmap <Space> :noh<cr>
+nnoremap <Space> :noh<cr>
 
 " Show search matches as you type them
 set incsearch
@@ -77,13 +77,13 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
 " run (or 'compile' if you like) current python source file
-nmap <leader>c :w\|!clear && python %<cr>
+nnoremap <leader>c :w\|!clear && python %<cr>
 
 " run current test file with py.test
-nmap <leader>r :w\|!clear && py.test %<cr>
+nnoremap <leader>r :w\|!clear && py.test %<cr>
 
 " run test suite
-nmap <leader>R :w\|!clear && py.test<cr>
+nnoremap <leader>R :w\|!clear && py.test<cr>
 
 " run CommandT plugin
-nmap <leader>t :CommandT<cr>
+nnoremap <leader>t :CommandT<cr>
