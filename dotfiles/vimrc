@@ -1,4 +1,6 @@
 let mapleader = ","
+let maplocalleader = "\\"
+" use like <localleader>
 
 "Enable syntax highlighting
 syntax on
