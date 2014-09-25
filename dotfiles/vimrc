@@ -93,3 +93,7 @@ nnoremap <leader>t :CommandT<cr>
 " quick access to edit vimrc and automatically source it on exit
 " think 'edit vimrc'
 nnoremap <leader>ev :!vim $MYVIMRC<cr>\|:source $MYVIMRC<cr>
+
+" wrap current visual selection in quotes
+vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
+vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>
