@@ -98,6 +98,12 @@ nnoremap <leader>ev :!vim $MYVIMRC<cr>\|:source $MYVIMRC<cr>
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>
 
+" disable arrow keys
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+
 " remove all trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>
 
