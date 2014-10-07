@@ -97,3 +97,6 @@ nnoremap <leader>ev :!vim $MYVIMRC<cr>\|:source $MYVIMRC<cr>
 " wrap current visual selection in quotes
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>
+
+" remove all trailing whitespace
+nnoremap <leader>W :%s/\s\+$//<cr>
