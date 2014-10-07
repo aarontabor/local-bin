@@ -100,3 +100,6 @@ vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>
 
 " remove all trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>
+
+" reformat current paragraph (fix hand wrapping)
+nnoremap <leader>f gqip
