@@ -98,6 +98,10 @@ nnoremap <leader>ev :!vim $MYVIMRC<cr>\|:source $MYVIMRC<cr>
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>
 
+" wrap current word in quotes
+nnoremap <leader>" lbi"<esc>lea"<esc>
+nnoremap <leader>' lbi'<esc>lea'<esc>
+
 " disable arrow keys
 noremap <up> <nop>
 noremap <down> <nop>
