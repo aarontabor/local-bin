@@ -21,3 +21,4 @@ shopt -s checkwinsize
 shopt -s globstar
 
 export PATH="$PATH:$HOME/bin" 
+export EDITOR="vim"

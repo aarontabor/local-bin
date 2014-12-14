@@ -1,15 +1,23 @@
 # Basic .muttrc for use with Gmail
+set alias_file = ~/bin/dotfiles/mutt/aliases
 
+source $alias_file
+
+# Move this shite
+color hdrdefault white black 
+color header brightgreen black ^From: 
+color quoted cyan black 
+color signature red black 
 
 # For receiving?
 set imap_user = "aarontabor50@gmail.com"
-set imap_pass = "password-here"
+set imap_pass = "tcssxwzrflhznsgk"
 set from = "aarontabor50@gmail.com"
 set realname = "Aaron W. Tabor"
 
 # For sending?
 set smtp_url = "smtp://aarontabor50@smtp.gmail.com:587/"
-set smtp_pass = "password-here"
+set smtp_pass = "tcssxwzrflhznsgk"
 
 set spoolfile = "imaps://imap.gmail.com:993/INBOX"
 set folder = "imaps://imap.gmail.com:993"

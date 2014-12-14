@@ -76,7 +76,9 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
 " run (or 'compile' if you like) current python source file
-nnoremap <leader>c :w\|!clear && python %<cr>
+augroup compile
+  autocmd Filetype python nnoremap <buffer> <leader>c :w\|!clear && python %<cr>
+augroup end
 
 " run current test file with py.test
 nnoremap <leader>r :w\|!clear && py.test %<cr>

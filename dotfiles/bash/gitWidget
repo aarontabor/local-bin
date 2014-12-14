@@ -10,7 +10,7 @@
 
 cleanColor=$1
 dirtyColor=$2
-unusedColor=$3
+untrackedColor=$3
 promptDefaultColor=$4
 
 if [ -z "`git status 2>&1 | grep fatal`" ]; then
@@ -19,11 +19,12 @@ if [ -z "`git status 2>&1 | grep fatal`" ]; then
   widgetColor=$promptDefaultColor
   if [ -n "`git status | grep "nothing to commit, working directory clean"`" ]; then
     widgetColor=$cleanColor
-  elif [ -n "`git status | grep ""`" ]; then
+  elif [ -n "`git status | grep "Untracked files:"`" ]; then
+    widgetColor=$untrackedColor
+  elif [ -n "`git status | grep "Changes not staged for commit:"`" ]; then 
     widgetColor=$dirtyColor
-  elif [ -n "`git status | grep ""`" ]; then
-    # local behind origin
-    widgetColor=$unusedColor
+  elif [ -n "`git status | grep "Changes to be committed:"`" ]; then
+    widgetColor=$dirtyColor
   fi
 
 

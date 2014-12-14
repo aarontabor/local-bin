@@ -3,9 +3,14 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias vi='vim'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias hvim='(cd && vim)'
+function take {
+  mkdir $1 && cd $1
+}
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -14,3 +19,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias xo='xdg-open'
 alias go='gnome-open'
 alias j='jobs'
+alias todo='vim ~/Dropbox/todo.txt'
