@@ -77,7 +77,10 @@ inoremap <s-tab> <c-n>
 
 " run (or 'compile' if you like) current python source file
 augroup compile
-  autocmd Filetype python nnoremap <buffer> <leader>c :w\|!clear && python %<cr>
+  autocmd!
+  autocmd Bufread nnoremap <buffer> <leader>c :w\|!clear && %:p<cr>
+  autocmd Filetype python nnoremap <buffer> <leader>c :w\|!clear && python %:p<cr>
+  autocmd Filetype c nnoremap <buffer> <leader>c :w\|!clear && make && make run<cr>
 augroup end
 
 " run current test file with py.test
