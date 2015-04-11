@@ -13,4 +13,8 @@
   aa = add --all
   ci = commit
   co = checkout
+  d = diff
+  dc = diff --cached
+  logg = log --graph --oneline
+  logo = log --oneline
   s = status
