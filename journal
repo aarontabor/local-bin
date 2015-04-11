@@ -1,6 +1,6 @@
 #!/bin/bash
 
-journalPath="/home/aaron/Dropbox/Notes/.journal/dailyJournal.txt"
+journalPath="/home/awt/Dropbox/Notes/.journal/dailyJournal.txt"
 
 
 function main() {
