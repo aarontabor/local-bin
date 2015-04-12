@@ -7,7 +7,7 @@ high=$1
 medium=$2
 low=$3
 
-powerPercentage=`upower --dump | grep percentage | sed "s/[^0-9]*\([0-9]*\)%/\1/"`
+powerPercentage=`upower --dump | grep percentage | head -n1 | sed "s/[^0-9]*\([0-9]*\)%/\1/"`
 
 if [ $powerPercentage -gt 50 ]; then
   echo $high
