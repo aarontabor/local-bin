@@ -1,0 +1,4 @@
+xterm*termName:xterm-256color
+xterm*locale:true
+xterm*reverseVideo:on
+xterm*faceName: Anonymous Pro:style=Mono:size=13:antialias=true
