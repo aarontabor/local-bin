@@ -1,0 +1,6 @@
+alias dropbox='launch "chromium --app=https://www.dropbox.com"'
+alias facebook='launch "chromium --app=https://www.facebook.com"'
+alias gdrive='launch "chromium --app=https://drive.google.com"'
+alias github='launch "chromium --app=https://www.github.com"'
+alias myunb='launch "chromium --app=https:my.unb.ca/group/mycampus/home"'
+alias youtube='launch "chromium --app=https://www.youtube.com"'
