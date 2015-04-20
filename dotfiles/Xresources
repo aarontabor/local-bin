@@ -4,3 +4,5 @@ xterm*reverseVideo:on
 xterm*faceName: Anonymous Pro:style=Mono:size=13
 
 Xft*antialias: true
+Xft*hinting: true
+Xft*hintstyle: hintslight
