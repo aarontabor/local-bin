@@ -1,0 +1,10 @@
+color header yellow black ^Date:
+color header brightgreen black ^From:
+color header brightblue black ^To:
+color header cyan black ^CC:
+color header brightgreen black ^Subject:
+color quoted red black
+
+color indicator black green
+color search red black
+color status brightblack black

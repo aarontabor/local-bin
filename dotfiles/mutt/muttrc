@@ -2,12 +2,7 @@
 set alias_file = ~/bin/dotfiles/mutt/aliases
 
 source $alias_file
-
-# Move this shite
-color hdrdefault white black 
-color header brightgreen black ^From: 
-color quoted cyan black 
-color signature red black 
+source ~/bin/dotfiles/mutt/config
 
 # For receiving?
 set imap_user = "aarontabor50@gmail.com"
