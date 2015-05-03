@@ -6,3 +6,15 @@
 
 "amixer set Master toggle"
   XF86AudioMute
+
+"keyboardLight --increment"
+  XF86KbdBrightnessUp
+
+"keyboardLight --decrement"
+  XF86KbdBrightnessDown
+
+"displayLight --increment"
+  XF86MonBrightnessUp
+
+"displayLight --decrement"
+  XF86MonBrightnessDown
