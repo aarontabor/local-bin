@@ -4,8 +4,8 @@ source ~/bin/dotfiles/bash/colorDefinitions
 # TODO: mailWidget is a place holder, this should check mail
 # using a cronjob or something.
 mailWidget="\[$BICyan\]@\[$Color_Off\]"
-gitWidget="`/home/awt/bin/dotfiles/bash/gitWidget "$BIGreen" "$BIYellow" "$BIRed" "$Color_Off"`"
-powerColor="`/home/awt/bin/dotfiles/bash/powerColor "$BIGreen" "$BIYellow" "$BIRed"`"
+gitWidget="`~/bin/dotfiles/bash/gitWidget "$BIGreen" "$BIYellow" "$BIRed" "$Color_Off"`"
+powerColor="`~/bin/dotfiles/bash/powerColor "$BIGreen" "$BIYellow" "$BIRed"`"
 
 username="\[$powerColor\]\u\[$Color_Off\]"
 workingDirBase="\[$BIBlue\]\W\[$Color_Off\]"

@@ -23,4 +23,4 @@ alias j='jobs'
 alias todo='vim ~/Dropbox/todo.txt'
 alias pp='powerPercentage'
 
-source /home/awt/bin/dotfiles/bash/webapps
+source ~/bin/dotfiles/bash/webapps
