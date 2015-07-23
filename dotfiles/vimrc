@@ -86,14 +86,37 @@ augroup compile
   autocmd Filetype c nnoremap <buffer> <leader>c :w\|!clear && make && make run<cr>
 augroup end
 
-" run current test file with py.test
-nnoremap <leader>r :w\|!clear && py.test %<cr>
+" open 's'ource file (ex. .c, .cpp)
+augroup source
+  autocmd!
+  autocmd Filetype cpp nnoremap <buffer> <leader>s :e %:p:r.cpp<cr>
+  autocmd Filetype c nnoremap <buffer> <leader>s :e %:p:r.c<cr>
+augroup end
 
-" run test suite
-nnoremap <leader>R :w\|!clear && py.test<cr>
+" open 'h'eader file (ex. .h, .hpp)
+augroup header
+  autocmd!
+  autocmd Filetype cpp nnoremap <buffer> <leader>h :e %:p:r.hpp<cr>
+  autocmd Filetype c nnoremap <buffer> <leader>h :e %:p:r.h<cr>
+augroup end
 
-" launch python shell
-nnoremap <leader>s :w\|!clear && python<cr>
+" 'r'un current test file
+augroup test
+	autocmd!
+	autocmd Filetype python nnoremap <leader>r :w\|!clear && py.test %<cr>
+augroup end
+
+" 'R'un entire test suite
+augroup suite
+	autocmd!
+	autocmd Filetype python nnoremap <leader>R :w\|!clear && py.test<cr>
+augroup end
+
+" launch 'i'nteractive shell
+augroup interactive
+	autocmd!
+	autocmd Filetype python nnoremap <leader>i :w\|!clear && python<cr>
+augroup end
 
 " run CommandT plugin
 nnoremap <leader>t :CommandT<cr>
