@@ -18,3 +18,12 @@
 
 "displayLight --decrement"
   XF86MonBrightnessDown
+
+"mpc prev"
+  XF86AudioPrev
+
+"mpc toggle"
+  XF86AudioPlay
+
+"mpc next"
+  XF86AudioNext
