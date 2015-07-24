@@ -84,6 +84,7 @@ augroup compile
   autocmd Bufread nnoremap <buffer> <leader>c :w\|!clear && %:p<cr>
   autocmd Filetype python nnoremap <buffer> <leader>c :w\|!clear && python %:p<cr>
   autocmd Filetype c nnoremap <buffer> <leader>c :w\|!clear && make && make run<cr>
+  autocmd Filetype markdown nnoremap <buffer> <leader>c :w\|!clear && markdown %:p > /tmp/vim_created.html && chromium /tmp/vim_created.html<cr>
 augroup end
 
 " open 's'ource file (ex. .c, .cpp)
