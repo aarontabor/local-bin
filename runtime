@@ -4,8 +4,10 @@
 # arbitrary command. The output of the command is simply the execution time (in
 # seconds), which makes it ideal for storing the output into a variable.
 
+secondsSinceEpoch=`date +%s`
+pid=`echo $$ | tr -d "\n"`
 
-temporaryFileName="/tmp/`date +%s`.runtime"
+temporaryFileName="/tmp/$pid-$secondsSinceEpoch.runtime"
 command="$*"
 
 if (/usr/bin/time -f "%e" -o $temporaryFileName $command &> /dev/null); then
