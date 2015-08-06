@@ -24,5 +24,6 @@ function g {
 alias j='jobs'
 alias todo='vim ~/Dropbox/todo.txt'
 alias pp='powerPercentage'
+alias h='history | grep '
 
 source ~/bin/dotfiles/bash/webapps
