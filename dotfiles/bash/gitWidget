@@ -14,7 +14,7 @@ untrackedColor=$3
 promptDefaultColor=$4
 
 if [ -z "`git status 2>&1 | grep fatal`" ]; then
-  gitBranch=`git branch | grep "\*" | cut -d" " -f2`
+  gitBranch=`git branch | grep "\*" | tr -d '*' | sed 's/^\W//'`
 
   widgetColor=$promptDefaultColor
   if [ -n "`git status | grep "nothing to commit, working directory clean"`" ]; then
