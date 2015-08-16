@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# creates a new entry in the Dropbox/Documents/blog directory
+
+title=$1
+currentDate=`date +%F` # format is YYYY-MM-DD, this will sort nicely
+
+pathToBlogEntry="$HOME/Dropbox/Documents/blog/$currentDate.$title.md"
+$EDITOR $pathToBlogEntry
