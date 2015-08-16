@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Prints a shell prompt widget to stdout
+#
+# Widget displays:
+#		!  - when connected to power adapter
+#   '' - otherwise
+#
+# Widget is Color-Coded
+#
+
+chargeColor=$1
+promptDefaultColor=$2
+
+chargeStatus=`upower --dump | grep online | cut -d':' -f2 | sed 's/^\W*//' | sed 's/\W*$//'`
+
+if [[ "$chargeStatus" = "yes" ]]; then
+	echo "$chargeColor>$promptDefaultColor"
+fi
