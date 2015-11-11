@@ -86,6 +86,9 @@ augroup compile
   autocmd Filetype c nnoremap <buffer> <leader>c :w\|!clear && make && make run && make clean<cr>
   autocmd Filetype cpp nnoremap <buffer> <leader>c :w\|!clear && make && make run && make clean<cr>
   autocmd Filetype markdown nnoremap <buffer> <leader>c :w\|!clear && markdown %:p > /tmp/vim_created.html && chromium /tmp/vim_created.html<cr>
+  autocmd Filetype tex nnoremap <buffer> <leader>c :w\|!clear && texi2pdf %:p && chromium %:p:r.pdf<cr>
+  autocmd Filetype matlab nnoremap <buffer> <leader>c :w\|!clear && octave %:p<cr>
+  autocmd Filetype tcl nnoremap <buffer> <leader>c :w\|!clear && ns %:p<cr>
 augroup end
 
 " open 's'ource file (ex. .c, .cpp)
