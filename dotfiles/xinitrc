@@ -6,6 +6,11 @@ xrdb -merge ~/.Xresources
 # MacBook Air 'hot-key' bindings
 xbindkeys
 
+# disable screen 'blanking'
+xset s off
+xset -dpms
+xset s noblank
+
 # set wallpaper
 feh --bg-scale $HOME/.wallpaper &
 
