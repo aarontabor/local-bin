@@ -6,11 +6,10 @@ source ~/bin/dotfiles/bash/colorDefinitions
 mailWidget="\[$BICyan\]@\[$Color_Off\]"
 gitWidget="`~/bin/dotfiles/bash/gitWidget "$BIGreen" "$BIYellow" "$BIRed" "$Color_Off"`"
 powerColor="`~/bin/dotfiles/bash/powerColor "$BIGreen" "$BIYellow" "$BIRed"`"
-chargeWidget="`~/bin/dotfiles/bash/chargeWidget "$BIYellow" "$Color_Off"`"
 
 username="\[$powerColor\]\u\[$Color_Off\]"
 workingDirBase="\[$BIBlue\]\W\[$Color_Off\]"
 prompt="\[$BIWhite\]\$\[$Color_Off\]"
 
-PS1="$chargeWidget$username:$workingDirBase$gitWidget $prompt "
+PS1="$username:$workingDirBase$gitWidget $prompt "
 
