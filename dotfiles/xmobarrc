@@ -1,0 +1,11 @@
+Config { font = "xft:inconsolata:size=12:bold:antialias=true",
+          borderColor = "black",
+          border = TopB,
+          bgColor = "black",
+          fgColor = "grey",
+          position = TopW L 100,
+          commands = [ Run Date "%a %b %_d %I:%M" "date" 10 ],
+          sepChar = "%",
+          alignSep = "}{",
+          template = "}%date%{"
+        }

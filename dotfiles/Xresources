@@ -1,11 +1,19 @@
-xterm*termName:xterm-256color
-xterm*locale:true
-xterm*reverseVideo:on
-xterm*faceName: Anonymous Pro:style=Mono:size=13
+XTerm*termName:xterm-256color
+XTerm*locale:true
+XTerm*metaSendsEscape:true
+XTerm*selectToClipboard:true
+XTerm*reverseVideo: on
 
+Xcursor.theme: Neutral
+
+XTerm*faceName: inconsolata:size=13
 Xft*antialias: true
 Xft*dpi: 96
 Xft*rgba: rgb
 Xft*hinting: true
 Xft*autohint: false
 Xft*hintstyle: hintslight
+
+XTerm.VT100.translations: #override \
+Super <Key> minus: smaller-vt-font() \n\
+Super <Key> plus: larger-vt-font() \n

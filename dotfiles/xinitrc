@@ -1,3 +1,12 @@
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+#!/bin/bash
+
+# Load Xresources
+xrdb -merge ~/.Xresources
+
+# MacBook Air 'hot-key' bindings
 xbindkeys
+
+# set wallpaper
+feh --bg-scale $HOME/.wallpaper &
+
 xmonad
