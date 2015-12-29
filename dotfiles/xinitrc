@@ -11,7 +11,13 @@ xset s off
 xset -dpms
 xset s noblank
 
+# disable speaker 'beep'
+xset -b
+
+# enable transparency effects
+xcompmgr &
+
 # set wallpaper
 feh --bg-scale $HOME/.wallpaper &
 
-xmonad
+exec xmonad
