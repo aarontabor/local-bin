@@ -20,6 +20,9 @@ function alert {
 function g {
   grep -r "$1" *
 }
+function f {
+	find . -iname "*$1*"
+}
 
 alias j='jobs'
 alias todo='vim ~/Dropbox/todo.txt'
