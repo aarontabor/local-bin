@@ -8,6 +8,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias hvim='(cd && vim)'
+
 function take {
   mkdir $1 && cd $1
 }
@@ -23,12 +24,12 @@ function g {
 function f {
 	find . -iname "*$1*"
 }
+function h {
+	history | grep "$1"
+}
 
 alias j='jobs'
 alias todo='vim ~/Dropbox/todo.txt'
 alias pp='powerPercentage'
-function h {
-	history | grep "$1"
-}
 
 source ~/bin/dotfiles/bash/webapps
