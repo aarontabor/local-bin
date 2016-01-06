@@ -1,3 +1,7 @@
+" manage vim-plugins using pathogen
+execute pathogen#infect()
+
+
 let mapleader = ","
 let maplocalleader = "\\"
 " use like <localleader>
