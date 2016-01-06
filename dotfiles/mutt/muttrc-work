@@ -1,0 +1,24 @@
+# .muttrc for my unb email account
+
+set alias_file = ~/bin/dotfiles/mutt/aliases
+
+source $alias_file
+source ~/bin/dotfiles/mutt/config
+
+set imap_keepalive=15
+
+set folder = "imap://q4k8p@localhost:1143"
+set spoolfile = "imap://q4k8p@localhost:1143/Inbox"
+set postponed = "imap://q4k8p@localhost:1143/Drafts"
+
+set imap_user="q4k8p@unb.ca"
+set imap_pass="<password-here>"
+
+set sendmail="/usr/bin/msmtp"
+
+set sort = "reverse-threads"
+set sort_aux = "last-date-received"
+
+set editor = "vim"
+
+
