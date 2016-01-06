@@ -1,4 +1,5 @@
 alias albert  ADupuis@nbpower.com
+alias andrii andrii.kuch@unb.ca
 alias christian  christian.gr@unb.ca
 alias cleo  gallant.cleo@gmail.com
 alias craig  craig.bettle@live.com
@@ -11,21 +12,32 @@ alias erik  escheme@unb.ca
 alias gerhard  gdueck@unb.ca
 alias jackie  r5p67@unb.ca
 alias james  jst@unb.ca
+alias johannes johannes.ilisei@unb.ca
 alias julian  jcardena@unb.ca
 alias ken  ken@unb.ca
 alias kendra  kdewitt@live.ca
 alias kiani  a.kiani@unb.ca
+alias kons kons.na@unb.ca
 alias lucas  c7mce@unb.ca
+alias marcel marcel.dombrowski@unb.ca
+alias mazder md._mazder.rahman@unb.ca
 alias me  aarontabor50@gmail.com
 alias mike  mike@atlanticchip.ca
 alias mom  kenttabor@xplornet.ca
 alias mostafa  m.shad@unb.ca
 alias pam  pamela.andrews@unb.ca
+alias panos patros.panos@unb.ca
+alias patricia pevans@unb.ca
 alias rick  wightman@unb.ca
 alias rita  rita.parker@unb.ca
+alias sadi mallik.hassan@unb.ca
+alias stephen smackay3@unb.ca
 alias trish  pmeng@unb.ca
+alias tristan t.basa@unb.ca
 alias yevgen  biletski@unb.ca
 
 alias tmeGroup christian,lucas,pam
 alias waterheaterGroup david, mostafa
 alias computerArchitectureGroup eric, james
+alias supervisors gerhard, ken, stephen
+alias garcosim kons, marcel, tristan, mazder, sadi, johannes, andrii
