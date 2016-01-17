@@ -145,6 +145,3 @@ nnoremap <leader>W :%s/\s\+$//<cr>
 
 " reformat current paragraph (fix hand wrapping)
 nnoremap <leader>f gqip
-
-" quicker escape from insert mode
-inoremap jk <esc>
