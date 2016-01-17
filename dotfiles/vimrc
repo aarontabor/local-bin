@@ -134,14 +134,6 @@ nnoremap <leader>t :CommandT<cr>
 " think 'edit vimrc'
 nnoremap <leader>ev :!vim $MYVIMRC<cr>\|:source $MYVIMRC<cr>
 
-" wrap current visual selection in quotes
-vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
-vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>
-
-" wrap current word in quotes
-nnoremap <leader>" lbi"<esc>lea"<esc>
-nnoremap <leader>' lbi'<esc>lea'<esc>
-
 " disable arrow keys
 noremap <up> <nop>
 noremap <down> <nop>
