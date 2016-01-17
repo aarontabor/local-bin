@@ -82,66 +82,41 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
-" run (or 'compile' if you like) current python source file
-augroup compile
-  autocmd!
-  autocmd Bufread nnoremap <buffer> <leader>c :w\|!clear && %:p<cr>
-  autocmd Filetype python nnoremap <buffer> <leader>c :w\|!clear && python %:p<cr>
-  autocmd Filetype c nnoremap <buffer> <leader>c :w\|!clear && make && make run && make clean<cr>
-  autocmd Filetype cpp nnoremap <buffer> <leader>c :w\|!clear && make && make run && make clean<cr>
-  autocmd Filetype markdown nnoremap <buffer> <leader>c :w\|!clear && markdown %:p > /tmp/vim_created.html && chromium /tmp/vim_created.html<cr>
-  autocmd Filetype tex nnoremap <buffer> <leader>c :w\|!clear && texi2pdf %:p && chromium %:p:r.pdf<cr>
-  autocmd Filetype matlab nnoremap <buffer> <leader>c :w\|!clear && octave %:p<cr>
-  autocmd Filetype tcl nnoremap <buffer> <leader>c :w\|!clear && ns %:p<cr>
-augroup end
-
-" open 's'ource file (ex. .c, .cpp)
-augroup source
-  autocmd!
-  autocmd Filetype cpp nnoremap <buffer> <leader>s :e %:p:r.cpp<cr>
-  autocmd Filetype c nnoremap <buffer> <leader>s :e %:p:r.c<cr>
-augroup end
-
-" open 'h'eader file (ex. .h, .hpp)
-augroup header
-  autocmd!
-  autocmd Filetype cpp nnoremap <buffer> <leader>h :e %:p:r.hpp<cr>
-  autocmd Filetype c nnoremap <buffer> <leader>h :e %:p:r.h<cr>
-augroup end
-
-" 'r'un current test file
-augroup test
-	autocmd!
-	autocmd Filetype python nnoremap <leader>r :w\|!clear && py.test %<cr>
-augroup end
-
-" 'R'un entire test suite
-augroup suite
-	autocmd!
-	autocmd Filetype python nnoremap <leader>R :w\|!clear && py.test<cr>
-augroup end
-
-" launch 'i'nteractive shell
-augroup interactive
-	autocmd!
-	autocmd Filetype python nnoremap <leader>i :w\|!clear && python<cr>
-augroup end
-
 " run CommandT plugin
 nnoremap <leader>t :CommandT<cr>
 
-" quick access to edit vimrc and automatically source it on exit
-" think 'edit vimrc'
-nnoremap <leader>ev :!vim $MYVIMRC<cr>\|:source $MYVIMRC<cr>
+" launch a 'b'ash shell
+nnoremap <leader>b :!bash<cr>
 
-" disable arrow keys
-noremap <up> <nop>
-noremap <down> <nop>
-noremap <left> <nop>
-noremap <right> <nop>
+" toggle 'h'ighlighting of spelling errors
+nnoremap <leader>h :set spell!<cr>
 
 " remove all trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>
 
 " reformat current paragraph (fix hand wrapping)
 nnoremap <leader>f gqip
+
+" quick access to edit vimrc and automatically source it on exit. think 'edit vimrc'
+nnoremap <leader>ev :!vim $MYVIMRC<cr>\|:source $MYVIMRC<cr>
+
+
+" language specific key-bindings
+augroup python
+	autocmd!
+	" 'c'ompile current file (run it using python interpreter)
+  autocmd Filetype python nnoremap <buffer> <leader>c :w\|!clear && python %:p<cr>
+	" 'g'oto associated source file (*.py) or test file (*_test.py)
+	" launch python 's'hell
+	autocmd Filetype python nnoremap <buffer> <leader>s :w\|!clear && python<cr>
+	" 'r'un entire test suite
+	autocmd Filetype python nnoremap <buffer> <leader>r :w\|!clear && py.test<cr>
+	" 'R'un current test file
+	autocmd Filetype python nnoremap <buffer> <leader>R :w\|!clear && py.test %<cr>
+augroup end
+
+" disable arrow keys
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
