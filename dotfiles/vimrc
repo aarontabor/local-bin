@@ -115,6 +115,20 @@ augroup python
 	autocmd Filetype python nnoremap <buffer> <leader>R :w\|!clear && py.test %<cr>
 augroup end
 
+augroup cplusplus
+	autocmd!
+	" 'c'ompile (using make)
+	autocmd Filetype cpp nnoremap <buffer> <leader>c :w\|!clear && make clean && make<cr>
+	" 'C'ompile current file (todo, merge into above in a sensible way
+	autocmd Filetype cpp nnoremap <buffer> <leader>C :w\|!clear && make %:p:r<cr>
+	" 'r'un (fallback to current file)
+	autocmd Filetype cpp nnoremap <buffer> <leader>r :w\|!clear && make run \|\| %:p:r<cr>
+	" 's'ource - goto associated source file (todo, only works in same directory)
+	autocmd Filetype cpp nnoremap <buffer> <leader>s :e %:p:r.cpp<cr>
+	" 'h'eader - goto associated header file (todo, only works in same directory)
+	autocmd Filetype cpp nnoremap <buffer> <leader>h :e %:p:r.hpp<cr>
+augroup end
+
 " disable arrow keys
 noremap <up> <nop>
 noremap <down> <nop>
