@@ -129,6 +129,14 @@ augroup cplusplus
 	autocmd Filetype cpp nnoremap <buffer> <leader>h :e %:p:r.hpp<cr>
 augroup end
 
+augroup latex
+	autocmd!
+	" 'c'ompile (using pdflatex)
+	autocmd Filetype tex nnoremap <buffer> <leader>c :w\|!clear && pdflatex %:p<cr>
+	" 'r'un (open the document in a pdf viewer)
+	autocmd Filetype tex nnoremap <buffer> <leader>r :w\|!clear && apvlv %:p:r.pdf<cr>
+augroup end
+
 " disable arrow keys
 noremap <up> <nop>
 noremap <down> <nop>
