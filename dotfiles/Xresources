@@ -1,19 +1,89 @@
-XTerm*termName:xterm-256color
-XTerm*locale:true
-XTerm*metaSendsEscape:true
-XTerm*selectToClipboard:true
-XTerm*reverseVideo: on
+! Configuration for urxvt terminal
 
-Xcursor.theme: Neutral
+! Perl Extensions 
+URxvt.perl-ext-common: resize-font
 
-XTerm*faceName: inconsolata:size=13
-Xft*antialias: true
-Xft*dpi: 96
-Xft*rgba: rgb
-Xft*hinting: true
-Xft*autohint: false
-Xft*hintstyle: hintslight
+! White Text on black background
+URxvt*reverseVideo:                   true
+! URxvt*background:                     color
+! URxvt*foreground:                     color
 
-XTerm.VT100.translations: #override \
-Super <Key> minus: smaller-vt-font() \n\
-Super <Key> plus: larger-vt-font() \n
+! Disable Scrollbar
+URxvt*scrollBar:                      false
+
+! Default font
+URxvt*font: xft:Inconsolata:size=13:antialias=true:hinting=true
+
+! Hotkeys to dynamically change fontsize
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger: C-Up
+
+! Launch urls in google-chrome
+URxvt*url-launcher:                   /usr/bin/google-chrome-stable
+
+
+! Color Scheme
+
+!black
+URxvt*color0:                         black
+
+!light red
+URxvt*color1:                         #ff99ff
+
+! light green
+URxvt*color2:                         #99ff99
+
+! yellow
+URxvt*color3:                         #ffff99
+
+! light blue
+URxvt*color4:                         #9999ff
+
+! light magenta
+URxvt*color5:                         #ff99ff
+
+! light cyan
+URxvt*color6:                         #99ddff
+
+! high white
+URxvt*color7:                         #e6e6e6
+
+! grey
+URxvt*color8:                         #b3b3b3
+
+! red
+URxvt*color9:                         #ff6666
+
+! green
+URxvt*color10:                        #66ff66
+
+! brown
+URxvt*color11:                        #ffab4d
+
+! blue
+URxvt*color12:                        #6666ff
+
+!magenta
+URxvt*color13:                        #ff66ff
+
+! cyan
+URxvt*color14:                        #66ccff
+
+! white
+URxvt*color15:                        white
+
+
+! URxvt*colorBD:                        color
+! URxvt*colorIT:                        color
+! URxvt*colorUL:                        color
+! URxvt*colorRV:                        color
+! URxvt*underlineColor:                 color
+! URxvt*scrollColor:                    color
+! URxvt*troughColor:                    color
+! URxvt*highlightColor:                 color
+! URxvt*highlightTextColor:             color
+! URxvt*cursorColor:                    color
+! URxvt*cursorColor2:                   color
+! URxvt*pointerColor:                   color
+! URxvt*pointerColor2:                  color
+! URxvt*borderColor:                    color
