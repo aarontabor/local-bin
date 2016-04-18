@@ -100,6 +100,8 @@ nnoremap <leader>f gqip
 " quick access to edit vimrc and automatically source it on exit. think 'edit vimrc'
 nnoremap <leader>ev :!vim $MYVIMRC<cr>\|:source $MYVIMRC<cr>
 
+" by default, 'c'ompile (execute) the current file
+nnoremap <leader>c :w\|!clear && %:p<cr>
 
 " language specific key-bindings
 augroup python
