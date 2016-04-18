@@ -145,8 +145,8 @@ augroup end
 
 augroup latex
 	autocmd!
-	" 'c'ompile (using pdflatex)
-	autocmd Filetype tex nnoremap <buffer> <leader>c :w\|!clear && pdflatex %:p<cr>
+	" 'c'ompile (using texi2pdf)
+	autocmd Filetype tex nnoremap <buffer> <leader>c :w\|!clear && texi2pdf %:p<cr>
 	" 'r'un (open the document in a pdf viewer)
 	autocmd Filetype tex nnoremap <buffer> <leader>r :w\|!clear && apvlv %:p:r.pdf<cr>
 augroup end
