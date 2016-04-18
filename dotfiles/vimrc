@@ -104,6 +104,18 @@ nnoremap <leader>ev :!vim $MYVIMRC<cr>\|:source $MYVIMRC<cr>
 nnoremap <leader>c :w\|!clear && %:p<cr>
 
 " language specific key-bindings
+augroup ruby
+	autocmd!
+	" 'c'ompile current file (run it using ruby interpreter)
+  autocmd Filetype ruby nnoremap <buffer> <leader>c :w\|!clear && ruby %:p<cr>
+	" 'g'oto associated source file (*.rb) or test file (*_spec.rb)
+	" launch ruby 's'hell
+	autocmd Filetype ruby nnoremap <buffer> <leader>s :w\|!clear && irb<cr>
+	" 'r'un entire test suite
+	" 'R'un current test file
+	autocmd Filetype ruby nnoremap <buffer> <leader>R :w\|!clear && rspec %:p<cr>
+augroup end
+
 augroup python
 	autocmd!
 	" 'c'ompile current file (run it using python interpreter)
