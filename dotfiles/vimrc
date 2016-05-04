@@ -151,6 +151,15 @@ augroup latex
 	autocmd Filetype tex nnoremap <buffer> <leader>r :w\|!clear && apvlv %:p:r.pdf<cr>
 augroup end
 
+augroup processing
+	" filetype is mistakenly detected as 'arduino' (work-around for now)
+	autocmd!
+	" 'c'ompile
+	autocmd Filetype arduino nnoremap <buffer> <leader>c :w\|!clear && processing-java --sketch=%:p:h --build<cr>
+	" 'r'un
+	autocmd Filetype arduino nnoremap <buffer> <leader>r :w\|!clear && processing-java --sketch=%:p:h --run<cr>
+augroup end
+
 " disable arrow keys
 noremap <up> <nop>
 noremap <down> <nop>
