@@ -22,11 +22,20 @@ function m {
 function g {
   grep -r "$1" *
 }
+function G {
+  grep -ri "$1" *
+}
 function f {
+	find . -name "*$1*"
+}
+function F {
 	find . -iname "*$1*"
 }
 function h {
 	history | grep "$1"
+}
+function H {
+	history | grep -i "$1"
 }
 
 alias j='jobs'
