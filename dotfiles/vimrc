@@ -143,6 +143,20 @@ augroup cplusplus
 	autocmd Filetype cpp nnoremap <buffer> <leader>h :e %:p:r.hpp<cr>
 augroup end
 
+augroup c
+	autocmd!
+	" 'c'ompile (using make)
+	autocmd Filetype c nnoremap <buffer> <leader>c :w\|!clear && make clean && make<cr>
+	" 'C'ompile current file (todo, merge into above in a sensible way
+	autocmd Filetype c nnoremap <buffer> <leader>C :w\|!clear && make %:p:r<cr>
+	" 'r'un (fallback to current file)
+	autocmd Filetype c nnoremap <buffer> <leader>r :w\|!clear && make run \|\| %:p:r<cr>
+	" 's'ource - goto associated source file (todo, only works in same directory)
+	autocmd Filetype c nnoremap <buffer> <leader>s :e %:p:r.c<cr>
+	" 'h'eader - goto associated header file (todo, only works in same directory)
+	autocmd Filetype c nnoremap <buffer> <leader>h :e %:p:r.h<cr>
+augroup end
+
 augroup latex
 	autocmd!
 	" 'c'ompile (using texi2pdf)
