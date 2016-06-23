@@ -17,6 +17,9 @@ xset -b
 # enable transparency effects
 xcompmgr &
 
+# start URXVT daemon
+urxvtd &
+
 # set wallpaper
 feh --bg-scale $HOME/.wallpaper &
 

@@ -14,7 +14,7 @@ main = do
     layoutHook = avoidStruts $ layoutHook defaultConfig, -- keep xmobar visible
     modMask = mod4Mask, -- Change Meta key to 'Command'
 
-		terminal = "urxvt",
+		terminal = "urxvtc",
 
     borderWidth = 1,
 		normalBorderColor = "#4d4d4d",
