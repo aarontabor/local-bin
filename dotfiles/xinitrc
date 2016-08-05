@@ -11,6 +11,9 @@ xset s off
 xset -dpms
 xset s noblank
 
+# allows cursor theme to be modified
+xsetroot -cursor_name left_ptr
+
 # disable speaker 'beep'
 xset -b
 
