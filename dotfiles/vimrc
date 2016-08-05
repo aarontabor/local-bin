@@ -41,7 +41,7 @@ set autoread
 set tabstop=2           " tab character will be interpreted as 2 spaces
 set shiftwidth=2        " indentation will be automated to 2 spaces
 set shiftround          " indentation (<c-t>, <c-d>, >>, <<)will be rounded to nearest indentation level
-"set expandtab           " expand all tab characters to the corresponding number of space characters
+set expandtab           " expand all tab characters to the corresponding number of space characters
 
 " Wrap lines that are longer than 80 characters
 set textwidth=80
