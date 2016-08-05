@@ -21,6 +21,7 @@ URxvt.resize-font.bigger: C-Up
 ! Launch urls in google-chrome
 URxvt*url-launcher:                   /usr/bin/google-chrome-stable
 
+Xcursor.theme: Simple-and-Soft
 
 ! Color Scheme
 
