@@ -5,8 +5,20 @@ Config { font = "xft:inconsolata:size=10:bold:antialias=true",
           bgColor = "black",
           fgColor = "grey",
           position = TopW L 100,
-          commands = [ Run Date "%a %b %_d %I:%M" "date" 10 ],
+          commands = [ 
+
+						-- format: Date args alias refresh-rate
+						Run Date "%a %b %_d %I:%M" "date" 600,
+
+						-- format: BatteryN args refresh-rate alias
+						Run BatteryN ["BAT0"] 
+							["-t", "<timeleft>",
+								"-L", "10", "-H", "50",
+								"-l", "red", "-m", "brown", "-h", "green"
+							] 600 "battery"
+
+					],
           sepChar = "%",
           alignSep = "}{",
-          template = "}%date%{"
+          template = "}%date%{%battery%"
         }
