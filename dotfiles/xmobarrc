@@ -1,4 +1,5 @@
-Config { font = "xft:inconsolata:size=12:bold:antialias=true",
+-- note that refresh-rates are in tenths of seconds
+Config { font = "xft:inconsolata:size=10:bold:antialias=true",
           borderColor = "black",
           border = TopB,
           bgColor = "black",
