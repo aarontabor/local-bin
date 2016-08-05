@@ -24,7 +24,5 @@ main = do
 
     focusFollowsMouse = False,
 
-		logHook = fadeInactiveLogHook 0.6  -- fade inactive windows
-
-
+		logHook = fadeInactiveLogHook 0.9  -- fade inactive windows
   }
