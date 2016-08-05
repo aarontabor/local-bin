@@ -18,7 +18,7 @@ main = do
 
 		terminal = "urxvtc",
 
-    borderWidth = 1,
+    borderWidth = 0,
 		normalBorderColor = "#4d4d4d",
 		focusedBorderColor = "#4d4d4d",
 
