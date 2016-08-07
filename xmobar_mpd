@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#
+# Reports currently playing Artist/Song information
+#
+
+if [[ `mpc status | wc -l` -gt 1 ]]; then
+  mpd_info="`mpc status | head -n1`"
+  echo $mpd_info
+else
+  echo ""
+fi
