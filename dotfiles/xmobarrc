@@ -7,6 +7,9 @@ Config { font = "xft:inconsolata:size=10:bold:antialias=true",
           position = TopW L 100,
           commands = [ 
 
+            -- format: Com CommandName Args Alias RefreshRate
+            Run Com "xmobar_volume" [] "hw" 50,
+
 						-- format: Date args alias refresh-rate
 						Run Date "%a %b %_d %I:%M" "date" 600,
 
@@ -20,5 +23,5 @@ Config { font = "xft:inconsolata:size=10:bold:antialias=true",
 					],
           sepChar = "%",
           alignSep = "}{",
-          template = "}%date%{%battery%"
+          template = "%hw%}%date%{%battery%"
         }

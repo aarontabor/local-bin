@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#
+# Reports the current ALSA volume level
+#
+
+volume_level=`amixer get Master | grep % | head -n1 | cut -d'[' -f2 | tr -d '%] '`
+echo "$volume_level%"
