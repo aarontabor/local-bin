@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#
+# Reports a terse representation of dropbox sync status
+#
+
+if [[ "`dropbox-cli status`" == "Up to date" ]]; then
+  echo "D"
+else
+  echo "D!"
+fi
+
