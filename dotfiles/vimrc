@@ -109,6 +109,9 @@ nnoremap <leader>c :w\|!clear && %:p<cr>
 " open a git-blame session for current file, centering display around current line
 nnoremap <leader>gb :w\|!clear && vim-gitblame %:p <c-r>=line('.')<cr><cr>
 
+" show most recent commit (entire patch) affecting current line
+nnoremap <leader>gs :w\|!clear && vim-gitshowcommit %:p <c-r>=line('.')<cr><cr>
+
 " language specific key-bindings
 augroup ruby
 	autocmd!

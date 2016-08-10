@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#
+# Opens most recent commit (full patch) affecting specified line in less
+#   Usage: vim-gitshowcommit <filename> <linenumber>
+#
+
+set -e
+
+filename="$1"
+linenumber="$2"
+
+commithash="`git blame -L $linenumber,$linenumber $filename | cut -d' ' -f1`"
+git show $commithash
