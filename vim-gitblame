@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#
+# Opens git-blame in less, centering display at a specified line
+#   Usage: vim-gitblame <filename> <linenumber>
+#
+
+set -e
+
+filename="$1"
+linenumber="$2"
+
+git blame $filename | less +`echo $linenumber`gu
