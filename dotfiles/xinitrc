@@ -15,7 +15,7 @@ xset s noblank
 xsetroot -cursor_name left_ptr
 
 # disable speaker 'beep'
-xset -b
+xset b off
 
 # enable transparency effects
 xcompmgr &
