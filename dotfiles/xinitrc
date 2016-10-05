@@ -24,6 +24,6 @@ xcompmgr &
 urxvtd &
 
 # set wallpaper
-feh --bg-scale $HOME/.wallpaper &
+feh --bg-fill $HOME/.wallpaper &
 
 exec xmonad
