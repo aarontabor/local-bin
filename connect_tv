@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+# enable TV monitor
+xrandr --output HDMI-1 --auto
+
+# disable built-in laptop monitor
+xrandr --output LVDS-1 --off
+
+# disable hardware 'beep' (not sure why I need to keep doing this)
+xset b off
+
+# refresh background image resolution
+feh --bg-fill /home/awt/.wallpaper
