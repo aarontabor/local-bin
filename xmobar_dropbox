@@ -5,8 +5,8 @@
 #
 
 if [[ "`dropbox-cli status`" == "Up to date" ]]; then
-  echo "D"
+  echo ""
 else
-  echo "D!"
+  echo "D"
 fi
 
