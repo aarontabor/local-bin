@@ -125,6 +125,15 @@ augroup ruby
 	autocmd Filetype ruby nnoremap <buffer> <leader>R :w\|!clear && rspec %:p<cr>
 augroup end
 
+augroup matlab
+  " show in bottom status bar: current class/method?
+	autocmd!
+	" 'c'ompile current file (run it using octave-cli interpreter)
+  autocmd Filetype matlab nnoremap <buffer> <leader>c :w\|!clear && octave-cli %:p<cr>
+	" launch octave 's'hell
+	autocmd Filetype matlab nnoremap <buffer> <leader>s :w\|!clear && octave-cli<cr>
+augroup end
+
 augroup python
   " show in bottom status bar: current class/method?
 	autocmd!
