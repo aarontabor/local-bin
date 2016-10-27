@@ -43,8 +43,8 @@ set shiftwidth=2        " indentation will be automated to 2 spaces
 set shiftround          " indentation (<c-t>, <c-d>, >>, <<)will be rounded to nearest indentation level
 set expandtab           " expand all tab characters to the corresponding number of space characters
 
-" Wrap lines that are longer than 80 characters
-set textwidth=80
+" Wrap lines breaking on word-boundaries for readability
+set linebreak
 
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
