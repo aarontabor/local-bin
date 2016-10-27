@@ -1,0 +1,32 @@
+#!/usr/bin/python
+
+#
+# Reports a terse representation of whether any 'unseen' mail is present in the
+# accounts inbox
+#
+
+from imaplib import IMAP4
+
+
+# fectching mail through local instance of davmail
+imap_servername = 'imap.example.com'
+imap_port = 143
+username = 'example@test.com'
+password = 'password'
+
+def main():
+  if check_mail():
+    print('M', end='')
+
+
+def check_mail():
+  connection = IMAP4(imap_servername, imap_port)
+  connection.login(username, password)
+  connection.select('inbox')
+  result, mail_data = connection.search(None, '(UNSEEN)')
+  message_ids = mail_data[0]
+  return len(message_ids) > 0
+
+
+if __name__ == '__main__':
+  main()
