@@ -27,3 +27,9 @@
 
 "mpc next"
   XF86AudioNext
+
+"mpc seek -10"
+  XF86Back
+
+"mpc seek +10"
+  XF86Forward
