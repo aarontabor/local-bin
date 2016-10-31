@@ -12,6 +12,7 @@ Config { font = "xft:inconsolata:size=9:bold:antialias=true",
             Run Com "xmobar_mpd" [] "mpd" 50,
             Run Com "xmobar_dropbox" [] "dropbox" 50,
             Run Com "xmobar_mail" [] "mail" 600,
+            Run Com "xmobar_slack" [] "slack" 600,
 
 						-- format: Date args alias refresh-rate
 						Run Date "%a %b %_d %I:%M" "date" 600,
@@ -26,5 +27,5 @@ Config { font = "xft:inconsolata:size=9:bold:antialias=true",
 					],
           sepChar = "%",
           alignSep = "}{",
-          template = "%hw%  %mpd%}%date%{%mail% %dropbox%  %battery%"
+          template = "%hw%  %mpd%}%date%{%slack% %mail% %dropbox%  %battery%"
         }

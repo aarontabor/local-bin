@@ -1,0 +1,43 @@
+#!/usr/bin/python
+
+#
+# Reports a terse representation of whether any 'unread' slack messages exists
+#
+
+from slacker import Slacker
+
+
+slack_api_token = 'token-here'
+slack = Slacker(slack_api_token)
+
+
+def main():
+  if any_unread_ims() or any_unread_mpims():
+    print('S', end='')
+
+
+def any_unread_ims():
+  response = slack.im.list()
+  conversation_ids = [im['id'] for im in response.body['ims']]
+
+  contains_unreads = []
+  for conversation_id in conversation_ids:
+    response = slack.im.history(conversation_id, count=0, unreads=True)
+    contains_unreads += [int(response.body['unread_count_display'])]
+
+  return any(contains_unreads)
+
+def any_unread_mpims():
+  response = slack.mpim.list()
+  conversation_ids = [group['id'] for group in response.body['groups']]
+
+  contains_unreads = []
+  for conversation_id in conversation_ids:
+    response = slack.mpim.history(conversation_id, count=0, unreads=True)
+    contains_unreads += [int(response.body['unread_count_display'])]
+
+  return any(contains_unreads)
+
+
+if __name__ == '__main__':
+  main()
