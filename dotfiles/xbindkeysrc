@@ -33,3 +33,6 @@
 
 "mpc seek +10"
   XF86Forward
+
+"scrot --focused"
+  Print
