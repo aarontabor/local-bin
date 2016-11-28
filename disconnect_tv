@@ -2,8 +2,11 @@
 
 set -e
 
+# disable VGA monitor
+xrandr --output VGA-1 --off
+
 # enable built-in laptop monitor
-xrandr --output LVDS-1 --auto
+xrandr --output LVDS-1 --auto --primary
 
 # disable TV monitor
 xrandr --output HDMI-1 --off

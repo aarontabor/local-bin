@@ -3,10 +3,13 @@
 set -e
 
 # enable TV monitor
-xrandr --output HDMI-1 --auto
+xrandr --output HDMI-1 --auto --primary
 
 # disable built-in laptop monitor
 xrandr --output LVDS-1 --off
+
+# enable VGA monitor
+xrandr --output VGA-1 --auto --rotate left --right-of HDMI-1 
 
 # disable hardware 'beep' (not sure why I need to keep doing this)
 xset b off
