@@ -1,7 +1,7 @@
 ! Configuration for urxvt terminal
 
 ! Perl Extensions 
-URxvt.perl-ext-common: resize-font
+URxvt.perl-ext-common: resize-font,matcher
 
 ! White Text on black background
 URxvt*reverseVideo:                   true
@@ -18,8 +18,9 @@ URxvt*font: xft:Inconsolata:size=11:antialias=true:hinting=true
 URxvt.resize-font.smaller: C-Down
 URxvt.resize-font.bigger: C-Up
 
-! Launch urls in google-chrome
-URxvt*url-launcher:                   /usr/bin/google-chrome-stable
+! Launch urls in google-chrome (using middle mouse button)
+URxvt*url-launcher:                   /usr/bin/chromium
+URxvt*matcher.buttton: 1
 
 Xcursor.theme: Simple-and-Soft
 
