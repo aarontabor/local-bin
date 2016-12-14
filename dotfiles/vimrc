@@ -26,6 +26,9 @@ set showcmd
 set hlsearch
 nnoremap <Space> :noh<cr>
 
+" use a less invasive search-match color scheme
+hi Search cterm=NONE ctermfg=black ctermbg=lightgrey
+
 " Show search matches as you type them
 set incsearch
 
