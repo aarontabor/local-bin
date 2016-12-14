@@ -187,6 +187,14 @@ augroup latex
 	autocmd Filetype tex nnoremap <buffer> <leader>r :w\|!clear && apvlv %:p:r.pdf<cr>
 augroup end
 
+augroup markdown
+	autocmd!
+	" 'c'ompile (using markdown)
+	autocmd Filetype markdown nnoremap <buffer> <leader>c :w !markdown<cr>
+	" 'r'un (open the document in lynx)
+	autocmd Filetype markdown nnoremap <buffer> <leader>r :w !markdown \| lynx -stdin<cr>
+augroup end
+
 augroup processing
 	" filetype is mistakenly detected as 'arduino' (work-around for now)
 	autocmd!
