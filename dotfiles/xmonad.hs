@@ -16,13 +16,13 @@ main = do
     layoutHook = smartSpacing 10 $ avoidStruts $ layoutHook defaultConfig, -- keep xmobar visible
     modMask = mod4Mask, -- Change Meta key to 'Command'
 
-		terminal = "urxvtc",
+    terminal = "urxvtc",
 
     borderWidth = 0,
-		normalBorderColor = "#4d4d4d",
-		focusedBorderColor = "#4d4d4d",
+    normalBorderColor = "#4d4d4d",
+    focusedBorderColor = "#4d4d4d",
 
     focusFollowsMouse = False,
 
-		logHook = fadeInactiveLogHook 0.9  -- fade inactive windows
+    logHook = fadeInactiveLogHook 0.8  -- fade inactive windows
   }
