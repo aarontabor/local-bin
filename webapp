@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#
+# A utility to launch a url in "app" mode (i.e., full screen, single tab, no browser buttons)
+#
+
+nohup chromium --app="$1" &> /dev/null

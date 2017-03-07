@@ -41,5 +41,3 @@ function H {
 alias j='jobs'
 alias todo='vim ~/Dropbox/todo.txt'
 alias pp='powerPercentage'
-
-source ~/bin/dotfiles/bash/webapps
