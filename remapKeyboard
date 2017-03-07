@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# Bootstrap script to start remap process
-# called via a unity start-up appliction mapping
-
-set -e 
-
-xmodmap /home/aaron/.xmodmaprc

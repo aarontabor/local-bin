@@ -1,5 +1,0 @@
-#!/bin/bash
-muttInstances=`ps -ef | grep mutt | sed 's/  */ /g' | cut -d' ' -f2`
-for id in $muttInstances; do
-  kill $id &> /dev/null
-done
