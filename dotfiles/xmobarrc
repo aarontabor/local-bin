@@ -8,11 +8,11 @@ Config { font = "xft:inconsolata:size=9:bold:antialias=true",
           commands = [ 
 
             -- format: Com CommandName Args Alias RefreshRate
-            Run Com "xmobar_volume" [] "hw" 50,
-            Run Com "xmobar_mpd" [] "mpd" 50,
-            Run Com "xmobar_dropbox" [] "dropbox" 50,
-            Run Com "xmobar_mail" [] "mail" 600,
-            Run Com "xmobar_slack" [] "slack" 600,
+            Run Com "xmobar_volume" [] "hw" 5,
+            Run Com "xmobar_mpd" [] "mpd" 5,
+            Run Com "xmobar_dropbox" [] "dropbox" 100,
+            Run Com "xmobar_mail" [] "mail" 300,
+            Run Com "xmobar_slack" [] "slack" 300,
 
 						-- format: Date args alias refresh-rate
 						Run Date "%a %b %_d %I:%M" "date" 600,
