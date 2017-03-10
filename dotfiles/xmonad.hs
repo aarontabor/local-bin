@@ -27,5 +27,5 @@ main = do
 
     logHook = fadeInactiveLogHook 0.95,  -- fade inactive windows
 
-    manageHook = composeAll [ className =? "processing-core-PApplet" --> doFloat ] -- float Processing windows by default
+    manageHook = doFloat, -- float all windows by default
   }
