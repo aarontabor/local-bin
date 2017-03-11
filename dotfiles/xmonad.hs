@@ -42,17 +42,18 @@ main = do
     inskeys :: XConfig l -> [((KeyMask, KeySym), X ())]
     inskeys conf@(XConfig {modMask = mod4Mask}) =
       [
-        -- move focused windows using h,j,k,l
-        ((mod4Mask, xK_h), withFocused (keysMoveWindow (-10, 0))),
-        ((mod4Mask, xK_j), withFocused (keysMoveWindow (0, 10))),
-        ((mod4Mask, xK_k), withFocused (keysMoveWindow (0, -10))),
-        ((mod4Mask, xK_l), withFocused (keysMoveWindow (10, 0))),
+        -- move focused windows using y,u,i,o
+        ((mod4Mask, xK_y), withFocused (keysMoveWindow (-20, 0))),
+        ((mod4Mask, xK_u), withFocused (keysMoveWindow (0, 20))),
+        ((mod4Mask, xK_i), withFocused (keysMoveWindow (0, -20))),
+        ((mod4Mask, xK_o), withFocused (keysMoveWindow (20, 0))),
 
-        -- grow/shrink focused window with J/K
-        ((mod4Mask .|. shiftMask, xK_j), withFocused (keysResizeWindow (20, 20) (0.5, 0.5))),
-        ((mod4Mask .|. shiftMask, xK_k), withFocused (keysResizeWindow (-20, -20) (0.5, 0.5))),
+        -- grow/shrink vertical focused window with U,I
+        ((mod4Mask .|. shiftMask, xK_u), withFocused (keysResizeWindow (0, 20) (0, 0))),
+        ((mod4Mask .|. shiftMask, xK_i), withFocused (keysResizeWindow (0, -20) (0, 0))),
 
-        -- stretch/squeeze hor focused window with H/L
-        ((mod4Mask .|. shiftMask, xK_h), withFocused (keysResizeWindow (20, 0) (0.5, 0))),
-        ((mod4Mask .|. shiftMask, xK_l), withFocused (keysResizeWindow (-20, 0) (0.5, 0)))
+        -- grow/shring horizontal focused window with O,Y
+        ((mod4Mask .|. shiftMask, xK_o), withFocused (keysResizeWindow (20, 0) (0, 0))),
+        ((mod4Mask .|. shiftMask, xK_y), withFocused (keysResizeWindow (-20, 0) (0, 0)))
       ]
+
