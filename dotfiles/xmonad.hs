@@ -5,6 +5,7 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.FadeInactive
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Layout.Fullscreen
 import XMonad.Layout.Spacing
 import XMonad.Util.CustomKeys(customKeys)
 import XMonad.Util.Run(spawnPipe)
@@ -14,7 +15,7 @@ main = do
 
   xmproc <- spawnPipe "xmobar"
 
-  xmonad $ ewmh defaultConfig {
+  xmonad $ fullscreenSupport $ ewmh defaultConfig {
     layoutHook = smartSpacing 10 $ avoidStruts $ layoutHook defaultConfig, -- keep xmobar visible
     modMask = mod4Mask, -- Change Meta key to 'Command'
 
