@@ -1,10 +1,16 @@
-color header yellow black ^Date:
-color header brightgreen black ^From:
-color header brightblue black ^To:
-color header cyan black ^CC:
-color header brightgreen black ^Subject:
-color quoted red black
+# overall flat theme
+color normal white brightcyan
+color status white black
+color indicator black white
+color search black white
 
-color indicator black green
-color search red black
-color status brightblack black
+# subtly highlight header
+color header black brightwhite ^*
+color header brightyellow brightwhite ^Subject:
+
+# make quoted text fade into background
+color quoted brightwhite brightcyan
+
+# make misc. objects match
+color markers white brightcyan
+color tree white brightcyan
