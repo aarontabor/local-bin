@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#
+# A webapp to lauch the "Kitten Academy" youtube live-stream in full-screen mode
+#
+
+webapp https://www.youtube.com/v/YPv9yKC76hE?autoplay=1

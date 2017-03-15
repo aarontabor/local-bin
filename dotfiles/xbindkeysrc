@@ -36,3 +36,6 @@
 
 "scrot --focused"
   Print
+
+"kittens"
+  XF86Launch1
