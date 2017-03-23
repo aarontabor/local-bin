@@ -22,9 +22,9 @@ main = do
 
     terminal = "urxvtc",
 
-    borderWidth = 0,
-    normalBorderColor = "#4d4d4d",
-    focusedBorderColor = "#4d4d4d",
+    borderWidth = 3,
+    normalBorderColor = "#ffe4e1",
+    focusedBorderColor = "#f0fff0",
 
     focusFollowsMouse = False,
 
