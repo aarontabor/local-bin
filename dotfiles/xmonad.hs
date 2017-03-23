@@ -1,5 +1,6 @@
 import XMonad
 import XMonad.Actions.FloatKeys
+import XMonad.Actions.WindowBringer
 import XMonad.ManageHook
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
@@ -54,6 +55,10 @@ main = do
 
         -- grow/shring horizontal focused window with O,Y
         ((mod4Mask .|. shiftMask, xK_o), withFocused (keysResizeWindow (20, 0) (0, 0))),
-        ((mod4Mask .|. shiftMask, xK_y), withFocused (keysResizeWindow (-20, 0) (0, 0)))
+        ((mod4Mask .|. shiftMask, xK_y), withFocused (keysResizeWindow (-20, 0) (0, 0))),
+
+        -- WindowGoer and WindowBringer
+        ((mod4Mask, xK_g), gotoMenu),
+        ((mod4Mask, xK_b), bringMenu)
       ]
 
