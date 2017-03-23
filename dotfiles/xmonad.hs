@@ -20,7 +20,7 @@ main = do
     layoutHook = smartSpacing 10 $ avoidStruts $ layoutHook defaultConfig, -- keep xmobar visible
     modMask = mod4Mask, -- Change Meta key to 'Command'
 
-    terminal = "urxvtc",
+    terminal = "xmonad_term",
 
     borderWidth = 3,
     normalBorderColor = "#ffe4e1",
